@@ -1,0 +1,176 @@
+\documentclass[a4paper,11pt,oneside]{report}
+\linespread{1.25}
+
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,dsfont}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage[section]{placeins}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,decorations.markings}
+\usepackage{subfigure}
+\usepackage{slashed}
+
+% Hyper References
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+% Page Style
+\voffset -1in
+\hoffset -1in
+\setlength{\marginparsep}{0mm}
+\setlength{\parskip}{2mm}
+\setlength{\textheight}{22.7cm}
+\textwidth  .72\paperwidth
+\addtolength\textheight{\topskip}
+
+\topmargin   .05\paperheight
+\headheight  .02\paperheight
+\headsep     .03\paperheight
+\footskip    .07\paperheight
+\oddsidemargin .14\paperwidth
+\evensidemargin .14\paperwidth
+\marginparwidth .11\paperwidth
+
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+% Custom Commands
+\newcommand{\arXiv}[1]{{\tt \href{http://www.arXiv.org/abs/#1}{arXiv:#1}}}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \textbf{\LARGE PROJECT TITLE HERE}\\[0.3cm]
+    \textbf{\LARGE SUBTITLE HERE}\\[0.8cm]
+    
+    \textbf{\large A report submitted in partial fulfillment of the requirements for the award of degree of} \\[0.8cm]
+    
+    \textbf{\LARGE DEGREE NAME}\\[0.2cm]
+    \textbf{\large in}\\[0.2cm]
+    \textbf{\LARGE SPECIALIZATION}\\[0.6cm]
+    
+    \textbf{By}\\[0.2cm]
+    \textbf{\large STUDENT NAME}\\[0.2cm]
+    \textbf{Roll No: XXXXXXXXX}\\[0.6cm]
+    
+    \textbf{Under the Supervision of}\\[0.2cm]
+    \textbf{\large SUPERVISOR NAME}\\[0.2cm]
+    \textbf{DEPARTMENT NAME}\\[0.2cm]
+    \textbf{INSTITUTION NAME}\\[0.2cm]
+    \textbf{Address Line 1}\\[0.6cm]
+    
+    \textbf{Industry Supervisor}\\[0.2cm]
+    \textbf{\large SUPERVISOR NAME}\\[0.2cm]
+    \textbf{COMPANY NAME}\\[0.2cm]
+    \textbf{Company Address}\\[0.2cm]
+    \textbf{(Duration: Start Date to End Date)}\\[1cm]
+    
+    % Placeholder for logos/institutional information
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        [Institution Logo Placeholder]
+        \textbf{DEPARTMENT NAME}\\
+        \textbf{INSTITUTION NAME}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        [Company Logo Placeholder]
+        \textbf{COMPANY NAME}\\
+        \small{Company Address}
+    \end{minipage}
+\end{titlepage}
+
+% Declaration Page
+\newpage
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\lipsum[1]
+
+% Acknowledgements
+\newpage
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\lipsum[2]
+
+% Abstract/Brief Overview
+\newpage
+\pagenumbering{roman}
+\chapter*{Brief Overview}
+\addcontentsline{toc}{chapter}{Brief Overview}
+\lipsum[3]
+
+% Table of Contents
+\newpage
+\tableofcontents 
+
+% List of Figures
+\newpage
+\listoffigures
+
+% Main Content
+\newpage
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+\section{Background}
+\lipsum[4]
+\section{Objectives}
+\lipsum[5]
+
+\chapter{Industry Overview}
+\section{Company Profile}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{C:/Users/ketan/Desktop/Skillset/latex_template_file/images/image.png}
+    \caption{sample image}
+    \label{fig:sample_image}
+\end{figure}
+
+\lipsum[6]
+\section{Technologies Used}
+\lipsum[7]
+
+\chapter{Review of Work Done}
+\section{Literature Review}
+\lipsum[8]
+\section{Methodology}
+\lipsum[9]
+
+\chapter{Details of Work}
+\section{Implementation}
+\lipsum[10]
+\section{Results}
+\lipsum[11]
+
+\chapter{Challenges and Solutions}
+\section{Technical Challenges}
+\lipsum[12]
+\section{Solutions Implemented}
+\lipsum[13]
+
+\chapter{Conclusion}
+\section{Summary}
+\lipsum[14]
+\section{Future Scope}
+\lipsum[15]
+
+% References
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+\begin{thebibliography}{99}
+\bibitem{ref1} Author, A. (Year). Title of the reference. Journal Name, Volume(Issue), Pages.
+\bibitem{ref2} Author, B. (Year). Title of another reference. Conference Name, Location.
+\end{thebibliography}
+
+\end{document}
